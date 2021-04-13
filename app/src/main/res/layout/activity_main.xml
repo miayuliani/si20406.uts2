@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFCFC"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="240dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="490dp"
+        android:background="@drawable/background"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.006"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="236dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="140dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Aplikasi To Do"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tambah"
+        android:layout_width="115dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="479dp"
+        android:background="#0B0A0A"
+        android:onClick="ButtonOnClick"
+        android:text="Tambah"
+        app:backgroundTint="#0B0B0B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/input"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
+        app:layout_constraintVertical_bias="0.454" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="381dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textPersonName"
+        android:text="Tambah Pekerjaan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName6"
+        android:layout_width="384dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textPersonName"
+        android:text="Belum Dikerjakan"
+        app:layout_constraintBottom_toTopOf="@+id/kerja1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tambah" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="424dp"
+        android:layout_height="196dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-22dp"
+        tools:layout_editor_absoluteY="294dp" />
+
+    <CheckBox
+        android:id="@+id/kerja1"
+        android:layout_width="231dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="16dp"
+        android:autoText="true"
+        android:text="Pekerjaan 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+
+    <CheckBox
+        android:id="@+id/kerja2"
+        android:layout_width="231dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="22dp"
+        android:text="Pekerjaan 2"
+        app:layout_constraintBottom_toTopOf="@+id/kerja3"
+        app:layout_constraintEnd_toStartOf="@+id/hapus2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/kerja3"
+        android:layout_width="231dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="22dp"
+        android:text="Pekerjaan 3"
+        app:layout_constraintBottom_toTopOf="@+id/kerja4"
+        app:layout_constraintEnd_toStartOf="@+id/hapus3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/kerja4"
+        android:layout_width="231dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="22dp"
+        android:text="Pekerjaan 4"
+        app:layout_constraintBottom_toTopOf="@+id/kerja5"
+        app:layout_constraintEnd_toStartOf="@+id/hapus4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/kerja5"
+        android:layout_width="231dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="16dp"
+        android:text="Pekerjaan 5"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName7"
+        app:layout_constraintEnd_toStartOf="@+id/hapus5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/hapus"
+        android:layout_width="115dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="5dp"
+        android:background="#0B0B0B"
+        android:text="Hapus"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/hapus2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+
+    <Button
+        android:id="@+id/hapus2"
+        android:layout_width="115dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:background="#020202"
+        android:text="Hapus"
+        app:backgroundTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hapus" />
+
+    <Button
+        android:id="@+id/hapus3"
+        android:layout_width="115dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:background="#050505"
+        android:text="Hapus"
+        app:backgroundTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hapus2" />
+
+    <Button
+        android:id="@+id/hapus4"
+        android:layout_width="115dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:background="#000000"
+        android:text="Hapus"
+        app:backgroundTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hapus3" />
+
+    <Button
+        android:id="@+id/hapus5"
+        android:layout_width="115dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:background="#000000"
+        android:text="Hapus"
+        app:backgroundTint="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hapus4" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName7"
+        android:layout_width="384dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="140dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textPersonName"
+        android:text="Selesai Dikerjakan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/texthasil"
+        android:layout_width="386dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
